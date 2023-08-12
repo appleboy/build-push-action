@@ -63,6 +63,7 @@ export async function getInputs(): Promise<Inputs> {
     provenance: BuildxInputs.getProvenanceInput('provenance'),
     pull: core.getBooleanInput('pull'),
     push: core.getBooleanInput('push'),
+    insecure: core.getBooleanInput('insecure'),
     sbom: core.getInput('sbom'),
     secrets: Util.getInputList('secrets', {ignoreComma: true}),
     secretFiles: Util.getInputList('secret-files', {ignoreComma: true}),
