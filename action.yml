@@ -74,6 +74,10 @@ inputs:
     description: "Push is a shorthand for --output=type=registry"
     required: false
     default: 'false'
+  insecure:
+    description: "insecure"
+    required: false
+    default: 'false'
   sbom:
     description: "Generate SBOM attestation for the build (shorthand for --attest=type=sbom)"
     required: false

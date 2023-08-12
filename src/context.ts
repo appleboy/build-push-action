@@ -28,6 +28,7 @@ export interface Inputs {
   provenance: string;
   pull: boolean;
   push: boolean;
+  insecure: boolean;
   sbom: string;
   secrets: string[];
   secretFiles: string[];
@@ -211,6 +212,9 @@ async function getCommonArgs(inputs: Inputs, toolkit: Toolkit): Promise<Array<st
   }
   if (inputs.push) {
     args.push('--push');
+  }
+  if (inputs.insecure) {
+    args.push('--insecure-registry');
   }
   return args;
 }
